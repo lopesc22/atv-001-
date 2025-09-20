@@ -1,0 +1,32 @@
+2. Maior e Menor: Escreva uma função que receba um array de inteiros e seu tamanho, 
+e através de ponteiros, retorne o maior e o menor elemento do array. A função deve ter 
+o seguinte protótipo: void encontrarMaiorMenor(int *array, int tamanho, int *maior, int 
+*menor);. 
+ 
+#include <stdio.h> 
+void encontrarMaiorMenor(int *array, int tamanho, int *maior, int *menor) { 
+*maior = *array; 
+*menor = *array; 
+for (int i = 1; i < tamanho; i++) { 
+    if (*(array + i) > *maior) { 
+        *maior = *(array + i); 
+    } 
+    if (*(array + i) < *menor) { 
+        *menor = *(array + i); 
+    } 
+} 
+  
+} 
+int main() { int n; 
+printf("Digite o tamanho do array: "); 
+scanf("%d", &n); 
+ 
+int array[n]; 
+ 
+printf("Digite %d elementos:\n", n); 
+for (int i = 0; i < n; i++) { 
+    scanf("%d", &array[i]); 
+} 
+ 
+int maior, menor; 
+encontrarMaiorMenor(array, n, &maior, &menor);
