@@ -1,0 +1,28 @@
+7. Inversão de String: Crie uma função que receba uma string e a inverta "in place", ou 
+seja, modificando a própria string original, utilizando ponteiros. Por exemplo, "brasil" 
+deve se tornar "lisarb" 
+#include <stdio.h> 
+#include <string.h> 
+void inverterString(char *str) { 
+char *inicio = str; 
+char *fim = str + strlen(str) - 1; 
+char temp; 
+while (inicio < fim) { 
+temp = *inicio; 
+*inicio = *fim; 
+*fim = temp; 
+inicio++; 
+fim--; 
+} 
+} 
+int main() 
+{ char texto[100]; 
+printf("Digite uma string: "); 
+fgets(texto, sizeof(texto), stdin); 
+if (texto[strlen(texto) - 1] == '\n') { 
+texto[strlen(texto) - 1] = '\0'; 
+} 
+inverterString(texto); 
+printf("String invertida: %s\n", texto); 
+return 0; 
+}
