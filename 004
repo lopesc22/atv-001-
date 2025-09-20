@@ -1,0 +1,15 @@
+4. Dobro do Valor: Escreva uma função chamada dobrar que receba um ponteiro para 
+um número inteiro como argumento e modifique o valor da variável original para que 
+seja o dobro do seu valor. Crie uma função main para testar a sua função. 
+#include <stdio.h> 
+void dobrar(int *num) { 
+*num = (*num) * 2; 
+} 
+int main() { int x; 
+printf("Digite um número: "); 
+scanf("%d", &x); 
+printf("Antes de dobrar: %d\n", x); 
+dobrar(&x);  // passa o endereço de x 
+printf("Depois de dobrar: %d\n", x); 
+return 0; 
+}
