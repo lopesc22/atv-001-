@@ -1,0 +1,15 @@
+3. Endereços de Memória: Declare uma variável inteira e um ponteiro para inteiro. 
+Atribua o endereço da variável ao ponteiro. Imprima o valor da variável, o endereço da 
+variável, o valor do ponteiro (que deve ser o mesmo endereço da variável) e o valor 
+apontado pelo ponteiro. 
+#include <stdio.h> 
+int main() { 
+int x = 10; 
+int *ptr; 
+ptr = &x; 
+printf("Valor da variável x: %d\n", x); 
+printf("Endereço da variável x: %p\n", &x); 
+printf("Valor armazenado no ponteiro (endereço de x): %p\n", ptr); 
+printf("Valor apontado pelo ponteiro (*ptr): %d\n", *ptr); 
+return 0; 
+}
