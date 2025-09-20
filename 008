@@ -1,0 +1,27 @@
+8. Calculadora Básica: Crie uma função que receba dois números de ponto f lutuante e 
+ponteiros para outras quatro variáveis de ponto flutuante. A função deve calcular a 
+soma, subtração, multiplicação e divisão dos dois primeiros números e armazenar os 
+resultados nas variáveis apontadas pelos ponteiros. 
+#include <stdio.h> 
+void calculadora(float a, float b, float *soma, float *sub, float *mult, float *div) { 
+*soma = a + b; 
+*sub = a - b; 
+*mult = a * b;  
+if (b != 0) 
+*div = a / b;  
+Else 
+*div = 0; 
+} 
+int main() { float x, y; float soma, sub, mult, div; 
+printf("Digite dois números: "); 
+scanf("%f %f", &x, &y); 
+calculadora(x, y, &soma, &sub, &mult, &div); 
+printf("Soma: %.2f\n", soma); 
+printf("Subtração: %.2f\n", sub); 
+printf("Multiplicação: %.2f\n", mult); 
+if (y != 0) 
+printf("Divisão: %.2f\n", div); 
+else 
+printf("Divisão: impossível (divisão por zero)\n"); 
+return 0; 
+}
