@@ -1,0 +1,23 @@
+5. Cópia de String: Implemente uma função que copie uma string para outra usando 
+ponteiros. O protótipo deve ser: void copiarString(char *origem, char *destino);. Não 
+utilize a função strcpy() da biblioteca padrão. 
+void copiarString(char *origem, char *destino) { 
+while (*origem != '\0') { 
+*destino = *origem; 
+origem++; 
+destino++; 
+} 
+*destino = '\0'; 
+} 
+int main() { char str1[100], str2[100]; 
+printf("Digite uma string: "); 
+fgets(str1, sizeof(str1), stdin); 
+ 
+copiarString(str1, str2); 
+ 
+printf("String original: %s", str1); 
+printf("String copiada: %s", str2); 
+ 
+return 0; 
+  
+}
